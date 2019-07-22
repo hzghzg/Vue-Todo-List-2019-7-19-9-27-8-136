@@ -1,8 +1,8 @@
 <template>
-  <div id="app">
+  <div id="app" >
     <Header></Header>
     <Body ref="body"></Body>
-    <Footer @childStatus="getFooterStatus"></Footer>
+    <Footer @childStatus="getFooterStatus" id="footer"></Footer>
   </div>
 </template>
 
@@ -31,8 +31,15 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
-  margin-top: 60px;
+  margin: 60px 200px 0px 200px;
+  padding-left:30px;
+  background-color:whitesmoke;
+  border:10px solid #c0c0c0;
+}
+#footer{
+  text-align: center;
+  margin-top: 40px;
 }
 </style>

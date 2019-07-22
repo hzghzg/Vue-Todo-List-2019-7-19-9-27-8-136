@@ -1,7 +1,7 @@
 <template>
-  <div id="Header">
+  <div id="Header" class="header">
     <h2>To Do List</h2>
-    <p>Simple Todo List with adding and filter by diff status</p>
+    <p class="desc">Simple Todo List with adding and filter by diff status</p>
   </div>
 </template>
 
@@ -15,6 +15,10 @@ export default {
 </script>
 
 <style>
+.header{
+  text-align: left;
+  margin-top:40px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -22,5 +26,8 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.desc{
+  font-style: italic;
 }
 </style>

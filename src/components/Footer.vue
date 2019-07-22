@@ -30,7 +30,7 @@ export default {
 a{
     display: inline-block;
     margin:10px;
-    color: #FFB5B5;
+    color: #F08080;
     text-decoration:none;
 
 }

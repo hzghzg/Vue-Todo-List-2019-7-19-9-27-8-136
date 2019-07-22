@@ -1,7 +1,7 @@
 <template>
   <div id="Body">
-      <InputBar @fetchChildValue="parentFetchChildValue"></InputBar>
-      <ListContainer v-for="item in List" :key="item.value" :childData="item" @childChose="changeStatus"></ListContainer>
+      <InputBar id="input" @fetchChildValue="parentFetchChildValue"></InputBar>
+      <ListContainer  v-for="item in List" :key="item.value" :childData="item" @childChose="changeStatus"></ListContainer>
   </div>
 </template>
 
@@ -53,6 +53,9 @@ export default {
 </script>
 
 <style>
+#input{
+    margin-bottom:40px;
+}
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

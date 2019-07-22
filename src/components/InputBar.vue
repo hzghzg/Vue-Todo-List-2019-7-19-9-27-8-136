@@ -30,7 +30,9 @@ export default {
     margin-right:10px 
 }
 .buttonclass{
-    background-color: #FFB5B5;
+    background-color: #F08080;
     color:ghostwhite;
+    border-radius: 5px;
+    border:0px;
 }
 </style>
