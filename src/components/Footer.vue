@@ -1,8 +1,8 @@
 <template>
   <div id="Footer">
-      <a href="" @click="displayAll">ALL</a>
-      <a href="" @click="displayActive">Active</a>
-      <a href="" @click="displayComplete">Complete</a>
+      <a href="" @click.prevent="displayAll">ALL</a>
+      <a href="" @click.prevent="displayActive">Active</a>
+      <a href="" @click.prevent="displayComplete">Complete</a>
   </div>
 </template>
 
@@ -10,6 +10,17 @@
 
 export default {
   name: 'Footer',
+  methods:{
+    displayAll(){
+        this.$emit("childStatus","all")
+    },
+    displayActive(){
+        this.$emit("childStatus","active")
+    },
+    displayComplete(){
+        this.$emit("childStatus","complete")
+    }
+  },
   components: {
   }
 }

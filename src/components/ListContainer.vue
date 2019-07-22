@@ -1,6 +1,6 @@
 <template>
   <div id="ListContainer">
-    <input type="checkbox" @click="beclicked">{{childData}}
+    <input type="checkbox" @click="beclicked" :checked="childData.status=='BeChosed'">{{childData.value}}
   </div>
 </template>
 
@@ -10,7 +10,10 @@ export default {
   components: {
   },
   methods:{
+    beclicked(){
+      this.$emit("childChose",this.childData)
+    }
   },
-  props:['childData','listToChild']
+  props:['childData']
 }
 </script>

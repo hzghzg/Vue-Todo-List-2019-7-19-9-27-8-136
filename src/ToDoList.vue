@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Body></Body>
-    <Footer></Footer>
+    <Body ref="body"></Body>
+    <Footer @childStatus="getFooterStatus"></Footer>
   </div>
 </template>
 
@@ -13,6 +13,11 @@ import Footer from "./components/Footer.vue";
 
 export default {
   name: 'app',
+  methods:{
+    getFooterStatus(f){
+      this.$refs.body.displayList(f);
+    }
+  },
   components: {
     Header,
     Body,
