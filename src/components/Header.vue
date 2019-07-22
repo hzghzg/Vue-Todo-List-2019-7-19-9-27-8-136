@@ -1,22 +1,12 @@
 <template>
-  <div id="app">
-    <Header></Header>
-    <Body></Body>
-    <Footer></Footer>
-  </div>
+  <div id="Header" style="font-weight:bold font-size:40px">To Do List</div>
 </template>
 
 <script>
-import Header from "./components/Header.vue";
-import Body from "./components/Body.vue";
-import Footer from "./components/Footer.vue";
 
 export default {
-  name: 'app',
+  name: 'Header',
   components: {
-    Header,
-    Body,
-    Footer
   }
 }
 </script>

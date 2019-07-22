@@ -1,14 +1,11 @@
 <template>
-  <div id="header">
-    <input type="text">
-    <input type="butoon" value="Add">
-  </div>
+  <div id="Body"></div>
 </template>
 
 <script>
 
 export default {
-  name: 'header',
+  name: 'Body',
   components: {
   }
 }
