@@ -33,7 +33,9 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: left;
   color: #2c3e50;
-  margin: 60px 200px 0px 200px;
+  padding-top: 30px;
+  margin:auto;
+  width: 500px;
   padding-left:30px;
   background-color:whitesmoke;
   border:10px solid #c0c0c0;

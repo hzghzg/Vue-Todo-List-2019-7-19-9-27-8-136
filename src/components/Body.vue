@@ -1,7 +1,7 @@
 <template>
   <div id="Body">
       <InputBar id="input" @fetchChildValue="parentFetchChildValue"></InputBar>
-      <ListContainer  v-for="item in List" :key="item.value" :childData="item" @childChose="changeStatus"></ListContainer>
+      <ol><ListContainer  v-for="item in List" :key="item.value" :childData="item" :listToChild="List" @childChose="changeStatus"></ListContainer></ol>
   </div>
 </template>
 
@@ -56,7 +56,10 @@ export default {
 #input{
     margin-bottom:40px;
 }
-#app {
+ol{
+    padding-left:10px;
+}
+#app { 
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

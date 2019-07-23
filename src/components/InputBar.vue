@@ -26,8 +26,9 @@ export default {
 </script>
 <style>
 .inputstyle{
-    width:300px;
-    margin-right:10px 
+    width:360px;
+    margin-right:10px;
+
 }
 .buttonclass{
     background-color: #F08080;

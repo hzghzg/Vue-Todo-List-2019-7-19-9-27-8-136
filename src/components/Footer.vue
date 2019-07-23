@@ -2,14 +2,17 @@
   <div id="Footer">
       <a href="" @click.prevent="displayAll">ALL</a>
       <a href="" @click.prevent="displayActive">Active</a>
-      <a href="" @click.prevent="displayComplete">Complete</a>
+      <a href="" @click.prevent="displayComplete" >Complete</a>
   </div>
 </template>
 
 <script>
 
+
+
 export default {
   name: 'Footer',
+  
   methods:{
     displayAll(){
         this.$emit("childStatus","all")
@@ -29,7 +32,7 @@ export default {
 <style>
 a{
     display: inline-block;
-    margin:10px;
+    padding:30px;
     color: #F08080;
     text-decoration:none;
 

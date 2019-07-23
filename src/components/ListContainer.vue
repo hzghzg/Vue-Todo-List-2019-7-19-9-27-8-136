@@ -1,6 +1,6 @@
 <template>
   <div id="ListContainer">
-    <input type="checkbox" @click="beclicked" :checked="childData.status=='BeChosed'" :style="childData.status=='BeChosed'?styleobj:{}" >{{childData.value}}
+    <li :style="[childData.status=='BeChosed'?styleobj:{}, listToChild.map(i=>i.value).indexOf(childData.value)%2==1?styleobj1:{} ]"><input type="checkbox" @click="beclicked" :checked="childData.status=='BeChosed'" >{{childData.value}}</li>
   </div>
 </template>
 
@@ -9,7 +9,9 @@ export default {
   name: 'ListContainer',
   data(){
     return{
-     styleobj:{'text-decoration':"line-through"}
+     styleobj:{'text-decoration':'line-through'},
+     styleobj1:{'background':'#F08080'}
+    //styleobj1:{'color':'red'}
     }
   },
   components: {
@@ -19,17 +21,17 @@ export default {
       this.$emit("childChose",this.childData)
     }
   },
-  props:['childData']
+  props:['childData',"listToChild"]
 }
 </script>
 <style>
-.deletestyle{
-  text-decoration: line-through;
+li{
+  margin-right: 20px;
 }
 #ListContainer{
-  padding-top:5px;
+  padding-top:1px;
   padding-left: 5px;
-  padding-bottom: 5px; 
+  padding-bottom: 1px; 
 }
 </style>
 }
